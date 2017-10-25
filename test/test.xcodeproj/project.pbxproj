@@ -14,6 +14,7 @@
 		B274F72B1FA0386E00A8E8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B274F7291FA0386E00A8E8FF /* LaunchScreen.storyboard */; };
 		B274F7361FA0386E00A8E8FF /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7351FA0386E00A8E8FF /* testTests.swift */; };
 		B274F7411FA0386E00A8E8FF /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F7401FA0386E00A8E8FF /* testUITests.swift */; };
+		B274F74F1FA0600500A8E8FF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B274F74E1FA0600500A8E8FF /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B274F73C1FA0386E00A8E8FF /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B274F7401FA0386E00A8E8FF /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		B274F7421FA0386F00A8E8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B274F74E1FA0600500A8E8FF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B274F7271FA0386E00A8E8FF /* Assets.xcassets */,
 				B274F7291FA0386E00A8E8FF /* LaunchScreen.storyboard */,
 				B274F72C1FA0386E00A8E8FF /* Info.plist */,
+				B274F74E1FA0600500A8E8FF /* Test.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -189,7 +192,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = johnny;
+				ORGANIZATIONNAME = "Luo Yao";
 				TargetAttributes = {
 					B274F71C1FA0386E00A8E8FF = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -261,6 +264,7 @@
 			files = (
 				B274F7231FA0386E00A8E8FF /* ViewController.swift in Sources */,
 				B274F7211FA0386E00A8E8FF /* AppDelegate.swift in Sources */,
+				B274F74F1FA0600500A8E8FF /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
