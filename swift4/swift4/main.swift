@@ -8,4 +8,14 @@
 
 import Foundation
 
-print("he");
+
+let x = 12_000_000
+
+//let minValue = UInt.min
+//let maxValue = UInt.max
+
+
+let minValue = UInt64.min
+let maxValue = UInt64.max
+
+print("\(minValue)---------\(maxValue)")
