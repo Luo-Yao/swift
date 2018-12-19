@@ -10,3 +10,7 @@ import Foundation
 
 print("Hello, World!")
 
+let x = 9
+var y = 1
+print(x*y)
+
