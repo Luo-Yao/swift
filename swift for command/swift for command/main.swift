@@ -14,4 +14,5 @@ let x = 9
 var y = 1
 print(x*y)
 print(x+y)
+print(y-x)
 
