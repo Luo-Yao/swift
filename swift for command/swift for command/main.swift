@@ -140,3 +140,84 @@ print("The status code is \(http200Status.statusCode)")
 // prints "The status code is 200"
 print("The status message is \(http200Status.description)")
 // prints "The status message is OK"
+
+/*
+ 元组在临时的值组合中很有用，但是它们不适合创建复杂的数据结构。如果你的数据结构超出了临时使用的范围，那么请建立一个类或结构体来代替元组
+ */
+
+//可选项
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+// convertedNumber is inferred to be of type "Int?", or "optional Int"
+
+//nil
+/*你可以通过给可选变量赋值一个 nil 来将之设置为没有值
+ nil 不能用于非可选的常量或者变量，如果你的代码中变量或常量需要作用于特定条件下的值缺失，可以给他声明为相应类型的可选项
+ */
+var serverResponseCode: Int? = 404
+// serverResponseCode contains an actual Int value of 404
+serverResponseCode = nil
+// serverResponseCode now contains no value
+//如果你定义的可选变量没有提供一个默认值，变量会被自动设置成 nil
+var surveyAnswer: String?
+// surveyAnswer is automatically set to nil
+//print(surveyAnswer)
+
+//你可以在同一个 if 语句中包含多可选项绑定，用逗号分隔即可。如果任一可选绑定结果是 nil 或者布尔值为 false ，那么整个 if 判断会被看作 false
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+
+//隐式展开可选项
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString! // requires an exclamation mark
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString // no need for an exclamation mark
+
+//错误处理
+func canThrowAnError() throws {
+    // this function may or may not throw an error
+}
+do {
+    try canThrowAnError()
+    // no error was thrown
+} catch {
+    // an error was thrown
+}
+
+//func makeASandwich() throws {
+//    // ...
+//}
+//
+//do {
+//    try makeASandwich()
+//    eatASandwich()
+//} catch Error.OutOfCleanDishes {
+//    washDishes()
+//} catch Error.MissingIngredients(let ingredients) {
+//    buyGroceries(ingredients)
+//}
+
+//断言和先决条件
+/*使用全局函数 assert(_:_:)  函数来写断言
+ 向 assert(_:_:) 函数传入一个结果为 true 或者 false 的表达式以及一条会在结果为 false 的时候显式的信息
+ */
+let age = -3
+//assert(age >= 0, "A person's age cannot be less than zero")
+// this causes the assertion to trigger, because age is not >= 0
+//assert(age >= 0)
+//if age > 10 {
+//    print("You can ride the roller-coaster or the ferris wheel.")
+//} else if age > 0 {
+//    print("You can ride the ferris wheel.")
+//} else {
+//    assertionFailure("A person's age can't be less than zero.")
+//}
+
+//强制先决条件
+/*你可以通过调用 precondition(_:_:file:line:) 函数来写先决条件。给这个函数传入表达式计算为 true 或 false ，
+ 如果条件的结果是 false 信息就会显示出来
+ */
+// In the implementation of a subscript...
+//precondition(index > 0, "Index must be greater than zero.")
